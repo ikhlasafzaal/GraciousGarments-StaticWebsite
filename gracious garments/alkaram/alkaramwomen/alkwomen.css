@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Exo 2', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#eee;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+html::-webkit-scrollbar-thumb {
+  background: #ff7a00;;
+  border-radius: 5rem;
+}
+
+/* ------------main heading----------------- */
+
+.alkwoheading{
+    padding:2rem 9%;
+    background-color: wheat;
+}
+
+.alkwomenhead{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 5.5rem;
+    color:var(--black);
+}
+
+.alkwomenhead span{
+    background: var(--orange);
+    color:#fff;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .alkwomenhead{
+        padding:0.045rem;
+    }
+
+    .alkwoheading{
+        padding:2.5rem;
+    }
+
+}
+
+/* ----------------sub heading----------------- */
+.headingWO{
+    text-align: center;
+    font-size: 4rem;
+    color:#333;
+    padding:1rem;
+    margin:2rem 0;
+    background:rgba(255, 51, 153,.05);
+    background-color: antiquewhite;
+}
+
+.headingWO span{
+    color:#ff7a00;
+}
+
+@media (max-width:450px){
+
+
+    .headingWO{
+        font-size: 3rem;
+    }
+
+}
+
+/* ------------------------------------------cards-------------------------------------- */
+
+
+@-webkit-keyframes fadeUp {
+    0% {
+      -webkit-transform: translateY(5rem);
+              transform: translateY(5rem);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      -webkit-transform: translateY(5rem);
+              transform: translateY(5rem);
+      opacity: 0;
+    }
+  }
+.subnav .filter-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 2.5rem;
+    gap: 2rem;
+  }
+  
+  .subnav .filter-buttons .buttons {
+    font-size: 1.7rem;
+    color: #282828;
+    cursor: pointer;
+    padding-top: 23px;
+  }
+  
+  .subnav .filter-buttons .buttons:hover, .products .filter-buttons .buttons.active {
+    color: #eb4d4b;
+  }
+  
+  .alkwomencard .box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .alkwomencard .box-container .box {
+    width: 26rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  }
+  
+  /* .products .box-container .box img{
+    background-image: url(https://dgbrz1yyanh5b.cloudfront.net/media/catalog/category/menuess224mar.jpg);
+  } */
+  
+  .alkwomencard .box-container .box.hide {
+    display: none;
+  }
+  
+  .alkwomencard .box-container .box.active {
+    -webkit-animation: fadeUp .4s linear;
+            animation: fadeUp .4s linear;
+  }
+  
+  .alkwomencard .box-container .box .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    height: 35rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: .5rem;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    z-index: 1;
+  }
+  
+  .alkwomencard .box-container .box .icons a {
+    font-size: 2rem;
+    color: var(--orange);
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background: #958474;
+    border-radius: .5rem;
+  }
+  
+  .alkwomencard .box-container .box:hover .icons {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  
+  .alkwomencard .box-container .box .image {
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .alkwomencard .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .alkwomencard .box-container .box:hover .image img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .alkwomencard .box-container .box .content {
+    padding: 1rem 1.5rem;
+    background-color: wheat;
+  }
+  
+  .alkwomencard .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #130f40;
+    font-weight: normal;
+  }
+  
+  .alkwomencard .box-container .box .content .price {
+    padding: .5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: .5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .alkwomencard .box-container .box .content .price .amount {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: #130f40;
+  }
+  
+  .alkwomencard .box-container .box .content .price .cut {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #666;
+  }
+  
+  .alkwomencard .box-container .box .content .price .offer {
+    font-size: 2rem;
+    color: #eb4d4b;
+  }
+  
+  .alkwomencard .box-container .box .content .stars {
+    font-size: 1.7rem;
+  }
+  
+  .alkwomencard .box-container .box .content .stars i {
+    color: #ff7800;
+  }
+  
+  .alkwomencard .box-container .box .content .stars span {
+    color: #666;
+  }
+  

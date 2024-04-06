@@ -1,0 +1,195 @@
+/* body{
+    background: #28282B;
+ }  */
+ 
+ .headcart{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     background-image: url(cart.jpg);
+     width: 100%;
+     height: 40vh;
+     background-position: center;
+     background-size: cover;
+ }
+ 
+ .headcart h4{
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 50px;
+ }
+ 
+ .headcart h1{
+    color: white;
+    font-size: 60px;
+    padding: 10px 0;
+    font-weight: bolder;
+ }
+
+ .headcart h1:hover{
+     color: palevioletred;
+     cursor: pointer;
+ }
+
+ #cartcontainer{
+     overflow-x: auto;
+ }
+
+
+ #cartcontainer table{
+     border-collapse: collapse;
+     width: 100%;
+     table-layout: fixed;
+     white-space: nowrap;
+ }
+
+ #cartcontainer table thead{
+     font-weight: 700;
+ }
+
+ #cartcontainer table thead td{
+    color: purple;
+    background-color:  palevioletred;
+    border: none;
+    padding: 6px 0;
+    font-size: x-large;
+ }
+
+ #cartcontainer table td{
+     border: 1px solid purple;
+     text-align: center;
+     color: #FF0000;
+ }
+/* 
+    #cartcontainer .tbody input{
+     background: palevioletred;
+ } */
+
+ #cartcontainer table td:nth-child(1){
+     width: 100px;
+ }
+
+ #cartcontainer table td:nth-child(2),
+ #cartcontainer table td:nth-child(3){
+    width: 200px;
+}
+
+
+#cartcontainer table td:nth-child(4),
+#cartcontainer table td:nth-child(5),
+#cartcontainer table td:nth-child(6){
+    width: 170px;
+}
+
+#cartcontainer table tbody img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+
+}
+
+#cartcontainer table tbody i{
+    color: #8d8c89;
+}
+
+/* #cart-bottom .cartinp{
+    background-color: bisque;
+} */
+
+#cart-bottom .coupon>div,
+#cart-bottom .total>div{
+    border: 1px solid purple;
+}
+
+#cart-bottom .coupon h5,
+#cart-bottom .total h5{
+    color: purple;
+    background-color:  palevioletred;
+    border: none;
+    padding: 6px 12px;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+#cart-bottom .coupon p,
+#cart-bottom .coupon input{
+    padding: 0 12px;
+}
+
+#cart-bottom .coupon input{
+    height: 44px;
+    margin: 0 0 20px 12px;
+    background-color: rgb(204, 176, 150);
+}
+
+#cart-bottom .total div>div{
+    padding: 0 12px;
+}
+
+#cart-bottom .total h6{
+    color: #FF0000;
+    font-size: x-large;
+}
+
+#cart-bottom .row p{
+    color: #FF0000;
+    text-align: center;
+    font-size: x-large;
+}
+
+.second-hr{
+    background: palevioletred;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total div>button{
+    margin: 0 12px 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cartbtn1{
+    background-image: url(button.jpg);
+    background-color: transparent;
+    color: #FF0000;
+    border: 0;
+    /* padding: 14px 80px 14px 65px ; */
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    /* padding-left: 134px; */
+ 
+ }
+
+ .cartbtn2{
+    background-image: url(button.jpg);
+    background-color: transparent;
+    color: #FF0000;
+    border: 0;
+    padding: 14px 80px 14px 65px ;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+ 
+ }
+ 
+ #cart-bottom .cartbtn1:hover{
+    background: palevioletred;
+    /* border: 1px solid #088178; */
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+ }
+
+ #cart-bottom .cartbtn2:hover{
+    background: palevioletred;
+    /* border: 1px solid #088178; */
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+ }
+ 

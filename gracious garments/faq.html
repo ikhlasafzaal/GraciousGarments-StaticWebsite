@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #000;
+            padding: 40px;
+        }
+        .accordion{
+            display: flex;
+            max-width: 1010px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 45px 90px 45px 60px;
+        }
+        .accordion .image-box{
+            height: 360px;
+            width: 300px;
+        }
+        .accordion .image-box img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+        .accordion .accordion-text{
+            width: 60%;
+        }
+        .accordion .accordion-text .title{
+            font-size: 35px;
+            font-weight: 600;
+            color: #000;
+        }
+        .accordion .accordion-text .faq-text{
+            margin-top: 25px;
+            height: 263px;
+            overflow: auto;
+
+        }
+        .faq-text::-webkit-scrollbar{
+            display: none;
+        }
+        .accordion .accordion-text li{
+            list-style: none;
+            cursor: pointer;
+        }
+        .accordion-text li .question-arrow{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .accordion-text li .question-arrow .question{
+            font-size: 20px;
+            color: #595959;
+            transition: all 0.3s ease;
+        }
+        .accordion-text li .line{
+            display: block;
+            height: 2px;
+            width: 100%;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .question-arrow .question{
+            font-size: 18px;
+            font-weight: 500;
+            color: #595959;
+        }
+        .question-arrow .arrow{
+            font-size: 20px;
+            color: #595959;
+        }
+        .accordion-text li.showAnswer .question-arrow .question,
+        .accordion-text li.showAnswer .question-arrow .arrow{
+            color: red;
+
+        }
+        .accordion-text li p{
+            width: 92%;
+            font-size: 15px;
+            font-weight: 500;
+            color: #595959;
+            display: none;
+        }
+        .accordion-text li.showAnswer p{
+            display: block;
+        }
+ 
+    </style>
+    <!--service section start-->
+    <section class="service">
+    <div class="accordion">
+        <div class="image-box">
+            <img src="22.png" alt="">
+        </div>
+        <div class="accordion-text">
+            <div class="title">FAQ</div>
+        <ul class="faq-text">
+            <li>
+                <div class="question-arrow">
+                    <span class="question">What do you Want your Requirments?</span>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil ea iure recusandae, sapiente veritatis! A quis esse exercitationem error delectus. Labore, cum in sapiente esse magnam rerum dolorem fuga?
+                </p>
+                <span class="line"></span>
+            </li>
+            <li>
+                <div class="question-arrow">
+                    <span class="question">What do you about our services and deals?</span>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil ea iure recusandae, sapiente veritatis! A quis esse exercitationem error delectus. Labore, cum in sapiente esse magnam rerum dolorem fuga?
+                </p>
+                <span class="line"></span>
+            </li>
+            <li>
+                <div class="question-arrow">
+                    <span class="question">Do you like someone in our brands?</span>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil ea iure recusandae, sapiente veritatis! A quis esse exercitationem error delectus. Labore, cum in sapiente esse magnam rerum dolorem fuga?
+                </p>
+                <span class="line"></span>
+            </li>
+            <li>
+                <div class="question-arrow">
+                    <span class="question">Wants to like and buy something for us?</span>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil ea iure recusandae, sapiente veritatis! A quis esse exercitationem error delectus. Labore, cum in sapiente esse magnam rerum dolorem fuga?
+                </p>
+                <span class="line"></span>
+            </li>
+            <li>
+                <div class="question-arrow">
+                    <span class="question">What we give services and discounts for every brands?</span>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nihil ea iure recusandae, sapiente veritatis! A quis esse exercitationem error delectus. Labore, cum in sapiente esse magnam rerum dolorem fuga?
+                </p>
+                <span class="line"></span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </section>
+    
+    <!--service section end-->
+      
+    <script>
+        let li = document.querySelectorAll(".faq-text li");
+        for(var i = 0; i< li.length; i++) {
+            li[i].addEventListener("click",(e)=>{
+                let clickedLi;
+                if(e.target.classList.contains("question-arrow")){
+                    clickedLi = e.target.parentElement;
+                    
+                }
+                else{
+                    clickedLi = e.target.parentElement.parentElement;
+                }
+               clickedLi.classList.toggle("showAnswer");
+            });
+        }
+      
+    </script>
+    
+</body>
+</html>
